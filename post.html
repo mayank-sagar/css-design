@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Read our blog</title>
+</head>
+<body id="home">
+    <header class="hero blog">
+        <div id="navbar" class="navbar top">
+            <h1 class="logo">
+                <a href="index.html" class="no-link">
+                    <span class="text-primary"><i class="fas fa-book-open"></i></span>Edge Ledger
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Blogs</h1>
+        </div>
+    </header>
+
+   <main>
+    <section class="post">
+        <h2>Blog Post One</h2>
+        <p class="meta"><i class="fas fa-user"></i>Posted By <strong>Jane Doe</strong> | April 19 2020</p>
+        <img src="images/blog/blog1.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minima numquam perferendis culpa, animi id incidunt earum impedit iusto cum repudiandae possimus beatae amet velit eius optio quidem dolorum modi necessitatibus tenetur asperiores vitae exercitationem. Ipsum itaque, non ipsa minima blanditiis voluptatum nisi voluptatibus possimus quia tempore delectus dolores dolorem.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quibusdam et! Iusto esse fugiat iste eveniet omnis, est totam tenetur! Ad itaque unde, aut at tempore minima voluptates eveniet, expedita odit optio recusandae, explicabo ex? Officiis, enim corporis sunt expedita rerum nisi, molestias quibusdam ipsa vero, assumenda voluptatem quasi laborum voluptates accusantium quidem! Sed ab illo veniam illum corporis asperiores!</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, optio temporibus! Sed, atque voluptatibus tempora facere minus excepturi cupiditate corporis ipsa dolorem nam voluptatum neque perferendis accusantium libero adipisci fuga saepe. Rem sequi, illo eveniet tempora facere eum beatae dicta aut non minima ea eius molestias dolore, amet quia sed.</p>
+    </section>
+   </main>
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+
+        <p>Copyright &copy; 2020 - EdgeLedger</p>
+    </footer>
+
+
+    <script>
+        var navbar = document.getElementById('navbar');
+        var scrolled = false;
+
+        window.onscroll = function() {
+            if(window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if(!scrolled) {
+                    navbar.style.transform = "translateY(-70px)"
+                    setTimeout(function() {
+                        navbar.style.transform = "translateY(0px)"
+                        scrolled = true;
+                    },200)
+                }
+            } else {
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        }
+    </script>
+
+</body>
+</html>
